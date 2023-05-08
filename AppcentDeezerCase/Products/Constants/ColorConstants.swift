@@ -8,6 +8,5 @@
 import SwiftUI
 
 extension Color {
-    public static var pink10 : Color { return .pink.opacity(0.1) }
     public static var gray40 : Color { return .gray.opacity(0.4) }
 }

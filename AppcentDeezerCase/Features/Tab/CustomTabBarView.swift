@@ -19,7 +19,7 @@ struct CustomTabBarView: View {
     }
     
     func getBgColor(tab: TabEnum) -> Color {
-        selectedTab == tab ? .pink : Color.gray40
+        selectedTab == tab ? .white : .gray
     }
     
     func selectTab(tab: TabEnum) -> Void {
@@ -37,7 +37,7 @@ struct CustomTabBarView: View {
                     Spacer()
                 }
             }.frame(height: HeightSize.tabHeight)
-                .background(Color.pink10)
+                .background(.pink)
                 .cornerRadius(CornerRadius.large)
                 .padding()
         }
