@@ -7,19 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1019C362A093E390098FF3C /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C352A093E390098FF3C /* CornerRadius.swift */; };
+		F1019C382A0946230098FF3C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C372A0946230098FF3C /* TabBarView.swift */; };
+		F1019C3A2A0946E50098FF3C /* HeightSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C392A0946E50098FF3C /* HeightSize.swift */; };
+		F1019C3C2A0947E40098FF3C /* DurationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C3B2A0947E40098FF3C /* DurationConstants.swift */; };
+		F1019C3E2A0948D00098FF3C /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C3D2A0948D00098FF3C /* AlbumView.swift */; };
+		F1019C402A0948E10098FF3C /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C3F2A0948E10098FF3C /* FavoriteListView.swift */; };
+		F1019C422A09492C0098FF3C /* ScaleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C412A09492C0098FF3C /* ScaleConstants.swift */; };
+		F1019C442A0949880098FF3C /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1019C432A0949880098FF3C /* ColorConstants.swift */; };
 		F11B40982A09242E00218869 /* AppcentDeezerCaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B40972A09242E00218869 /* AppcentDeezerCaseApp.swift */; };
-		F11B409A2A09242E00218869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B40992A09242E00218869 /* ContentView.swift */; };
 		F11B409C2A09242F00218869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409B2A09242F00218869 /* Assets.xcassets */; };
 		F11B40A02A09242F00218869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409F2A09242F00218869 /* Preview Assets.xcassets */; };
+		F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAF4722A09275A00C129F8 /* DynamicValue+GeometryProxy.swift */; };
+		F1FAF4772A0927A600C129F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1FAF4792A0927A600C129F8 /* Localizable.strings */; };
+		F1FAF47E2A09286300C129F8 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAF47D2A09286300C129F8 /* CustomTabBarView.swift */; };
+		F1FAF4812A092F4800C129F8 /* TabEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAF4802A092F4800C129F8 /* TabEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1019C352A093E390098FF3C /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		F1019C372A0946230098FF3C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F1019C392A0946E50098FF3C /* HeightSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSize.swift; sourceTree = "<group>"; };
+		F1019C3B2A0947E40098FF3C /* DurationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationConstants.swift; sourceTree = "<group>"; };
+		F1019C3D2A0948D00098FF3C /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		F1019C3F2A0948E10098FF3C /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
+		F1019C412A09492C0098FF3C /* ScaleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleConstants.swift; sourceTree = "<group>"; };
+		F1019C432A0949880098FF3C /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		F11B40942A09242E00218869 /* AppcentDeezerCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppcentDeezerCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11B40972A09242E00218869 /* AppcentDeezerCaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppcentDeezerCaseApp.swift; sourceTree = "<group>"; };
-		F11B40992A09242E00218869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F11B409B2A09242F00218869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F11B409D2A09242F00218869 /* AppcentDeezerCase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppcentDeezerCase.entitlements; sourceTree = "<group>"; };
 		F11B409F2A09242F00218869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1FAF4722A09275A00C129F8 /* DynamicValue+GeometryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicValue+GeometryProxy.swift"; sourceTree = "<group>"; };
+		F1FAF4782A0927A600C129F8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F1FAF47D2A09286300C129F8 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		F1FAF4802A092F4800C129F8 /* TabEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +74,11 @@
 		F11B40962A09242E00218869 /* AppcentDeezerCase */ = {
 			isa = PBXGroup;
 			children = (
+				F1FAF46F2A0926A800C129F8 /* Utils */,
+				F1FAF46E2A09269B00C129F8 /* Resources */,
+				F1FAF46D2A09269300C129F8 /* Products */,
+				F1FAF46C2A09268100C129F8 /* Features */,
 				F11B40972A09242E00218869 /* AppcentDeezerCaseApp.swift */,
-				F11B40992A09242E00218869 /* ContentView.swift */,
 				F11B409B2A09242F00218869 /* Assets.xcassets */,
 				F11B409D2A09242F00218869 /* AppcentDeezerCase.entitlements */,
 				F11B409E2A09242F00218869 /* Preview Content */,
@@ -67,6 +92,102 @@
 				F11B409F2A09242F00218869 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1FAF46C2A09268100C129F8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF47C2A09284800C129F8 /* FavList */,
+				F1FAF47B2A09283E00C129F8 /* Musics */,
+				F1FAF47A2A09283200C129F8 /* Tab */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F1FAF46D2A09269300C129F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		F1FAF46E2A09269B00C129F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F1FAF46F2A0926A800C129F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF47F2A092F3D00C129F8 /* Enums */,
+				F1FAF4742A09278500C129F8 /* Locale */,
+				F1FAF4712A09274800C129F8 /* Extensions */,
+				F1FAF4702A09272300C129F8 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F1FAF4702A09272300C129F8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F1019C352A093E390098FF3C /* CornerRadius.swift */,
+				F1019C392A0946E50098FF3C /* HeightSize.swift */,
+				F1019C3B2A0947E40098FF3C /* DurationConstants.swift */,
+				F1019C412A09492C0098FF3C /* ScaleConstants.swift */,
+				F1019C432A0949880098FF3C /* ColorConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F1FAF4712A09274800C129F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF4722A09275A00C129F8 /* DynamicValue+GeometryProxy.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1FAF4742A09278500C129F8 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF4792A0927A600C129F8 /* Localizable.strings */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		F1FAF47A2A09283200C129F8 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF47D2A09286300C129F8 /* CustomTabBarView.swift */,
+				F1019C372A0946230098FF3C /* TabBarView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		F1FAF47B2A09283E00C129F8 /* Musics */ = {
+			isa = PBXGroup;
+			children = (
+				F1019C3D2A0948D00098FF3C /* AlbumView.swift */,
+			);
+			path = Musics;
+			sourceTree = "<group>";
+		};
+		F1FAF47C2A09284800C129F8 /* FavList */ = {
+			isa = PBXGroup;
+			children = (
+				F1019C3F2A0948E10098FF3C /* FavoriteListView.swift */,
+			);
+			path = FavList;
+			sourceTree = "<group>";
+		};
+		F1FAF47F2A092F3D00C129F8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAF4802A092F4800C129F8 /* TabEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = F11B408B2A09242E00218869;
 			productRefGroup = F11B40952A09242E00218869 /* Products */;
@@ -128,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11B40A02A09242F00218869 /* Preview Assets.xcassets in Resources */,
+				F1FAF4772A0927A600C129F8 /* Localizable.strings in Resources */,
 				F11B409C2A09242F00218869 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,12 +262,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11B409A2A09242E00218869 /* ContentView.swift in Sources */,
+				F1FAF4812A092F4800C129F8 /* TabEnum.swift in Sources */,
+				F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */,
+				F1019C382A0946230098FF3C /* TabBarView.swift in Sources */,
+				F1019C442A0949880098FF3C /* ColorConstants.swift in Sources */,
+				F1019C3E2A0948D00098FF3C /* AlbumView.swift in Sources */,
+				F1019C362A093E390098FF3C /* CornerRadius.swift in Sources */,
+				F1019C3A2A0946E50098FF3C /* HeightSize.swift in Sources */,
+				F1019C402A0948E10098FF3C /* FavoriteListView.swift in Sources */,
+				F1019C422A09492C0098FF3C /* ScaleConstants.swift in Sources */,
+				F1FAF47E2A09286300C129F8 /* CustomTabBarView.swift in Sources */,
 				F11B40982A09242E00218869 /* AppcentDeezerCaseApp.swift in Sources */,
+				F1019C3C2A0947E40098FF3C /* DurationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1FAF4792A0927A600C129F8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1FAF4782A0927A600C129F8 /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F11B40A12A09242F00218869 /* Debug */ = {
