@@ -31,6 +31,13 @@
 		F11B409C2A09242F00218869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409B2A09242F00218869 /* Assets.xcassets */; };
 		F11B40A02A09242F00218869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409F2A09242F00218869 /* Preview Assets.xcassets */; };
 		F11BDB792A09B1B200D94977 /* SpecificCorners+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BDB782A09B1B200D94977 /* SpecificCorners+CornerRadius.swift */; };
+		F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */; };
+		F1AA46922A0B03AB00CBA32E /* SpacerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */; };
+		F1AA46942A0B071D00CBA32E /* WidthSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46932A0B071D00CBA32E /* WidthSize.swift */; };
+		F1AA46972A0B07E900CBA32E /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46962A0B07E900CBA32E /* RoundedRectangleView.swift */; };
+		F1AA469A2A0B083B00CBA32E /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46992A0B083B00CBA32E /* ImageView.swift */; };
+		F1AA469C2A0B09C800CBA32E /* RectangleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA469B2A0B09C800CBA32E /* RectangleImageView.swift */; };
+		F1AA469E2A0B0B7200CBA32E /* SpacingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA469D2A0B0B7200CBA32E /* SpacingConstants.swift */; };
 		F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAF4722A09275A00C129F8 /* DynamicValue+GeometryProxy.swift */; };
 		F1FAF4772A0927A600C129F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1FAF4792A0927A600C129F8 /* Localizable.strings */; };
 		F1FAF47E2A09286300C129F8 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAF47D2A09286300C129F8 /* CustomTabBarView.swift */; };
@@ -61,6 +68,13 @@
 		F11B409D2A09242F00218869 /* AppcentDeezerCase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppcentDeezerCase.entitlements; sourceTree = "<group>"; };
 		F11B409F2A09242F00218869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F11BDB782A09B1B200D94977 /* SpecificCorners+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificCorners+CornerRadius.swift"; sourceTree = "<group>"; };
+		F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingConstants.swift; sourceTree = "<group>"; };
+		F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerConstants.swift; sourceTree = "<group>"; };
+		F1AA46932A0B071D00CBA32E /* WidthSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthSize.swift; sourceTree = "<group>"; };
+		F1AA46962A0B07E900CBA32E /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
+		F1AA46992A0B083B00CBA32E /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		F1AA469B2A0B09C800CBA32E /* RectangleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImageView.swift; sourceTree = "<group>"; };
+		F1AA469D2A0B0B7200CBA32E /* SpacingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingConstants.swift; sourceTree = "<group>"; };
 		F1FAF4722A09275A00C129F8 /* DynamicValue+GeometryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicValue+GeometryProxy.swift"; sourceTree = "<group>"; };
 		F1FAF4782A0927A600C129F8 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1FAF47D2A09286300C129F8 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -108,6 +122,8 @@
 		F1019C5A2A0998C60098FF3C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1AA46982A0B082E00CBA32E /* Image */,
+				F1AA46952A0B07A600CBA32E /* Rectangle */,
 				F1019C622A09A6CC0098FF3C /* Text */,
 				F1019C5B2A0998E60098FF3C /* CircularProgress */,
 			);
@@ -169,6 +185,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F1AA46952A0B07A600CBA32E /* Rectangle */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA46962A0B07E900CBA32E /* RoundedRectangleView.swift */,
+				F1AA469B2A0B09C800CBA32E /* RectangleImageView.swift */,
+			);
+			path = Rectangle;
+			sourceTree = "<group>";
+		};
+		F1AA46982A0B082E00CBA32E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA46992A0B083B00CBA32E /* ImageView.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		F1FAF46C2A09268100C129F8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +250,10 @@
 				F1019C412A09492C0098FF3C /* ScaleConstants.swift */,
 				F1019C432A0949880098FF3C /* ColorConstants.swift */,
 				F1019C502A0950A10098FF3C /* StringConstants.swift */,
+				F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */,
+				F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */,
+				F1AA46932A0B071D00CBA32E /* WidthSize.swift */,
+				F1AA469D2A0B0B7200CBA32E /* SpacingConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -357,15 +394,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FAF4812A092F4800C129F8 /* TabEnum.swift in Sources */,
+				F1AA46942A0B071D00CBA32E /* WidthSize.swift in Sources */,
 				F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */,
+				F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */,
 				F1019C382A0946230098FF3C /* TabBarView.swift in Sources */,
 				F1019C532A0951100098FF3C /* Logging+AFError.swift in Sources */,
 				F1019C4D2A094FE80098FF3C /* CategoryService.swift in Sources */,
 				F1019C442A0949880098FF3C /* ColorConstants.swift in Sources */,
+				F1AA46972A0B07E900CBA32E /* RoundedRectangleView.swift in Sources */,
 				F1019C3E2A0948D00098FF3C /* CategoryView.swift in Sources */,
 				F1019C362A093E390098FF3C /* CornerRadius.swift in Sources */,
 				F1019C562A0951470098FF3C /* CategoryViewModel.swift in Sources */,
 				F1019C4A2A094EC30098FF3C /* CategoryModel.swift in Sources */,
+				F1AA46922A0B03AB00CBA32E /* SpacerConstants.swift in Sources */,
 				F1019C612A099D8D0098FF3C /* String+ToLocalize.swift in Sources */,
 				F11BDB792A09B1B200D94977 /* SpecificCorners+CornerRadius.swift in Sources */,
 				F1019C512A0950A10098FF3C /* StringConstants.swift in Sources */,
@@ -376,7 +417,10 @@
 				F1FAF47E2A09286300C129F8 /* CustomTabBarView.swift in Sources */,
 				F1019C5F2A099D180098FF3C /* LocaleKeys.swift in Sources */,
 				F1019C642A09A6EF0098FF3C /* Title3BoldPinkText.swift in Sources */,
+				F1AA469E2A0B0B7200CBA32E /* SpacingConstants.swift in Sources */,
+				F1AA469A2A0B083B00CBA32E /* ImageView.swift in Sources */,
 				F11B40982A09242E00218869 /* AppcentDeezerCaseApp.swift in Sources */,
+				F1AA469C2A0B09C800CBA32E /* RectangleImageView.swift in Sources */,
 				F1019C3C2A0947E40098FF3C /* DurationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
