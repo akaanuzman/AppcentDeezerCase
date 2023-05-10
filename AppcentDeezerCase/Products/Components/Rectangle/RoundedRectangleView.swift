@@ -12,7 +12,7 @@ struct RoundedRectangleView: View {
         Rectangle()
             .frame(width: WidthSize.imageAndRectangleWidth,
                    height: HeightSize.rectangleHeight)
-            .foregroundColor(.gray40)
+            .foregroundColor(.pink)
             .cornerRadius(CornerRadius.large)
     }
 }

@@ -133,6 +133,7 @@
 		F1019C5A2A0998C60098FF3C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1A1EE282A0BF4F900860246 /* Card */,
 				F1AA46982A0B082E00CBA32E /* Image */,
 				F1AA46952A0B07A600CBA32E /* Rectangle */,
 				F1019C622A09A6CC0098FF3C /* Text */,
@@ -196,11 +197,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F1A1EE282A0BF4F900860246 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA469B2A0B09C800CBA32E /* RectangleImageView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		F1AA46952A0B07A600CBA32E /* Rectangle */ = {
 			isa = PBXGroup;
 			children = (
 				F1AA46962A0B07E900CBA32E /* RoundedRectangleView.swift */,
-				F1AA469B2A0B09C800CBA32E /* RectangleImageView.swift */,
 			);
 			path = Rectangle;
 			sourceTree = "<group>";

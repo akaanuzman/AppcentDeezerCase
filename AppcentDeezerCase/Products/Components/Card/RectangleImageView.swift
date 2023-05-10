@@ -16,7 +16,7 @@ struct RectangleImageView: View {
             VStack {
                 ImageView(imageUrl: imageUrl)
                 Text(title)
-                Spacer.spacer16x
+                Spacer.spacer24x
             }
         }
     }
