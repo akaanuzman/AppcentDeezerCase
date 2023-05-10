@@ -12,10 +12,6 @@ struct CategoryView: View {
     @StateObject var categoryViewModel : CategoryViewModel = CategoryViewModel()
     private let adaptiveColumns = [ GridItem(.adaptive(minimum: 200)) ]
     
-    init() {
-        UINavigationBar.appearance().tintColor = .systemPink
-    }
-    
     var body: some View {
         let categories : CategoryModel? = categoryViewModel.categories
         if categories != nil {
@@ -23,29 +19,27 @@ struct CategoryView: View {
             if categories!.data != nil {
                 NavigationView {
                     ScrollView {
-                        LazyVGrid(columns: adaptiveColumns,
-                                  spacing: SpacingConstants.gridSpacing) {
+                        LazyVGrid(columns: adaptiveColumns) {
                                 ForEach(categories!.data!, id: \.id) {
                                     category in
                                     NavigationLink(destination:
-                                                    ArtistView(artistViewModel:
-                                                    ArtistViewModel(genreId: String(category.id ?? 0)))) {
-                                            RectangleImageView(imageUrl: category.picture ?? "",
+                                                    ArtistsView(artistsViewModel:
+                                                                    ArtistsViewModel(genreId: String(category.id ?? 0)),
+                                                                categoryName: category.name ?? "")) {
+                                        ImageCardView(imageUrl: category.picture ?? "",
                                                 title: category.name ?? "")
                                         }
                                 }
                         }
                     }.padding(.bottom,
                           PaddingConstants.Bottom.high.rawValue)
-                    .navigationTitle("")
+                    .navigationTitle("")  // hide back button's text
+                    // for app bar title exp: (Artists)
                     .toolbar {
                         ToolbarItem(placement: .principal) {
                             Title3BoldPinkText(title: LocaleKeys.categories.locale())
                         }
-                        
                     }
-                    
-                   
                 }.font(.title3)
                     .bold()
                     .foregroundColor(.white)
@@ -64,4 +58,3 @@ struct CategoryView_Previews: PreviewProvider {
         CategoryView()
     }
 }
-

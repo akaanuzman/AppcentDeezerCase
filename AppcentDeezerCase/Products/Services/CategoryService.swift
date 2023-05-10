@@ -8,11 +8,9 @@
 import Foundation
 import Alamofire
 
-protocol ICategoryService {
-    func fetchCategories() async -> CategoryModel?
-}
-
-class CategoryService: ICategoryService {
+class CategoryService {
+    
+    /// Fetch all music categories
     func fetchCategories() async -> CategoryModel? {
         let url : String = StringConstants.baseUrl+"genre"
         let request = AF.request(url).serializingDecodable(CategoryModel.self)

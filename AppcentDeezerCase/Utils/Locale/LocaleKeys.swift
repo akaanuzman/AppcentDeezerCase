@@ -8,5 +8,4 @@
 struct LocaleKeys {
     static let loading : String = "loading"
     static let categories : String = "categories"
-    static let artists : String = "artists"
 }

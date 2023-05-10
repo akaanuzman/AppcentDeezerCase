@@ -7,13 +7,13 @@
 
 import Foundation
 
-class ArtistViewModel: ObservableObject {
+class ArtistsViewModel: ObservableObject {
     let artistService : ArtistService = ArtistService()
     let genreId : String
     
-    @Published var artists: ArtistModel?
+    @Published var artists: ArtistsModel?
     
-    init(genreId: String ,artists: ArtistModel? = nil) {
+    init(genreId: String ,artists: ArtistsModel? = nil) {
         self.genreId = genreId
         self.artists = artists
         Task.detached {

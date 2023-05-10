@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RectangleImageView: View {
+struct ImageCardView: View {
     let imageUrl : String
     let title : String
     var body: some View {
@@ -22,9 +22,9 @@ struct RectangleImageView: View {
     }
 }
 
-struct RectangleImageView_Previews: PreviewProvider {
+struct ImageCarView_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleImageView(imageUrl: "https://picsum.photos/200/300",
+        ImageCardView(imageUrl: "https://picsum.photos/200/300",
                            title: "deneme")
     }
 }

@@ -7,21 +7,24 @@
 
 import SwiftUI
 
-struct ArtistView: View {
-    @StateObject var artistViewModel : ArtistViewModel
-    private let adaptiveColumns = [ GridItem(.adaptive(minimum: 200)) ]
+struct ArtistsView: View {
+    @StateObject var artistsViewModel : ArtistsViewModel
+    private let adaptiveColumns = [ GridItem(.adaptive(minimum: 140)) ]
+    let categoryName : String
     
     var body: some View {
-        let artists : ArtistModel? = artistViewModel.artists
+        let artists : ArtistsModel? = artistsViewModel.artists
         if artists != nil {
             /// if the artists data returns empty
             if artists!.data != nil {
                     ScrollView {
-                        LazyVGrid(columns: adaptiveColumns,spacing: SpacingConstants.gridSpacing) {
+                        LazyVGrid(columns: adaptiveColumns) {
                             ForEach(artists!.data!, id: \.id) {
                                 artist in
-                                NavigationLink(destination: FavoriteListView()) {
-                                    RectangleImageView(imageUrl: artist.picture ?? "",
+                                NavigationLink(destination:
+                                                AlbumView(artistInfoViewModel: ArtistInfoViewModel(artistId: String(artist.id ?? 0),
+                                                        tracklist: artist.tracklist ?? ""))) {
+                                    ImageCardView(imageUrl: artist.picture ?? "",
                                                        title: artist.name ?? "")
                                 }
                             }
@@ -32,9 +35,8 @@ struct ArtistView: View {
                         // for app bar title exp: (Artists)
                         .toolbar {
                             ToolbarItem(placement: .principal) {
-                                Title3BoldPinkText(title: LocaleKeys.artists.locale())
+                                Title3BoldPinkText(title: categoryName.locale())
                             }
-                            
                         }
                         // text style for cards
                         .font(.title3)
@@ -48,8 +50,9 @@ struct ArtistView: View {
     }
 }
 
-struct ArtistView_Previews: PreviewProvider {
+struct ArtistsView_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistView(artistViewModel: ArtistViewModel(genreId: "116"))
+        ArtistsView(artistsViewModel: ArtistsViewModel(genreId: "116"),
+                    categoryName: "Rap")
     }
 }
