@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // MARK: - AlbumModel
 struct AlbumModel: Codable {
@@ -15,7 +16,19 @@ struct AlbumModel: Codable {
 }
 
 // MARK: - ArtistAlbum
-struct ArtistAlbum : Codable {
+struct ArtistAlbum : Codable , Hashable {
+    
+    // MARK: remove ArtistAlbum with duplicate album id
+    static func == (lhs: ArtistAlbum, rhs: ArtistAlbum) -> Bool {
+        return lhs.album?.id ?? 0 == rhs.album?.id ?? 0
+    }
+
+    // MARK: remove ArtistAlbum with duplicate album id
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(album?.id ?? 0)
+    }
+    
+    
     let id: Int?
     let readable: Bool?
     let title, titleShort: String?

@@ -11,6 +11,12 @@ import Kingfisher
 struct AlbumView: View {
     @StateObject var artistInfoViewModel : ArtistInfoViewModel
     
+    // MARK: remove ArtistAlbum with duplicate album id
+    func filterAlbum(albums: [ArtistAlbum]) -> [ArtistAlbum] {
+        print(Array(Set(albums)).count)
+        return Array(Set(albums))
+    }
+
     var body: some View {
         let artist : ArtistModel? = artistInfoViewModel.artist
         let albums : AlbumModel? = artistInfoViewModel.albums
@@ -21,7 +27,8 @@ struct AlbumView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(height: HeightSize.imgHeight)
                 if albums!.data != nil {
-                    List(albums!.data!, id: \.id) {
+                    let filteredAlbum = filterAlbum(albums: albums!.data!)
+                    List(filteredAlbum, id: \.id) {
                         album in
                         Section {
                             HStack {
@@ -32,7 +39,8 @@ struct AlbumView: View {
                                 Text(album.album?.title ?? "")
                                 Spacer()
                             }
-                        }.listRowBackground(Color.pink).listRowInsets(EdgeInsets())
+                        }.listRowBackground(Color.pink)
+                            .listRowInsets(EdgeInsets())
                             
                     }.scrollContentBackground(.hidden)
                         .listStyle(.insetGrouped)
