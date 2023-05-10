@@ -12,10 +12,10 @@ protocol ICategoryService {
     func fetchCategories() async -> CategoryModel?
 }
 
-
 class CategoryService: ICategoryService {
     func fetchCategories() async -> CategoryModel? {
-        let request = AF.request(StringConstants.baseUrl+"genre").serializingDecodable(CategoryModel.self)
+        let url : String = StringConstants.baseUrl+"genre"
+        let request = AF.request(url).serializingDecodable(CategoryModel.self)
         let response = await request.response
         response.error?.showError()
         return response.value

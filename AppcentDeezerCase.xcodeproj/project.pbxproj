@@ -31,6 +31,10 @@
 		F11B409C2A09242F00218869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409B2A09242F00218869 /* Assets.xcassets */; };
 		F11B40A02A09242F00218869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B409F2A09242F00218869 /* Preview Assets.xcassets */; };
 		F11BDB792A09B1B200D94977 /* SpecificCorners+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BDB782A09B1B200D94977 /* SpecificCorners+CornerRadius.swift */; };
+		F12008192A0B25F80071E389 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12008182A0B25F80071E389 /* ArtistView.swift */; };
+		F120081B2A0B266B0071E389 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120081A2A0B266B0071E389 /* ArtistModel.swift */; };
+		F120081D2A0B26840071E389 /* ArtistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120081C2A0B26840071E389 /* ArtistService.swift */; };
+		F120081F2A0B28350071E389 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120081E2A0B28350071E389 /* ArtistViewModel.swift */; };
 		F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */; };
 		F1AA46922A0B03AB00CBA32E /* SpacerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */; };
 		F1AA46942A0B071D00CBA32E /* WidthSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA46932A0B071D00CBA32E /* WidthSize.swift */; };
@@ -68,6 +72,10 @@
 		F11B409D2A09242F00218869 /* AppcentDeezerCase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppcentDeezerCase.entitlements; sourceTree = "<group>"; };
 		F11B409F2A09242F00218869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F11BDB782A09B1B200D94977 /* SpecificCorners+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificCorners+CornerRadius.swift"; sourceTree = "<group>"; };
+		F12008182A0B25F80071E389 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
+		F120081A2A0B266B0071E389 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		F120081C2A0B26840071E389 /* ArtistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistService.swift; sourceTree = "<group>"; };
+		F120081E2A0B28350071E389 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingConstants.swift; sourceTree = "<group>"; };
 		F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerConstants.swift; sourceTree = "<group>"; };
 		F1AA46932A0B071D00CBA32E /* WidthSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthSize.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				F1019C492A094EC30098FF3C /* CategoryModel.swift */,
+				F120081A2A0B266B0071E389 /* ArtistModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F1019C4C2A094FE80098FF3C /* CategoryService.swift */,
+				F120081C2A0B26840071E389 /* ArtistService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F1019C552A0951470098FF3C /* CategoryViewModel.swift */,
+				F120081E2A0B28350071E389 /* ArtistViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -291,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				F1019C3D2A0948D00098FF3C /* CategoryView.swift */,
+				F12008182A0B25F80071E389 /* ArtistView.swift */,
 			);
 			path = Musics;
 			sourceTree = "<group>";
@@ -396,6 +408,7 @@
 				F1FAF4812A092F4800C129F8 /* TabEnum.swift in Sources */,
 				F1AA46942A0B071D00CBA32E /* WidthSize.swift in Sources */,
 				F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */,
+				F120081F2A0B28350071E389 /* ArtistViewModel.swift in Sources */,
 				F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */,
 				F1019C382A0946230098FF3C /* TabBarView.swift in Sources */,
 				F1019C532A0951100098FF3C /* Logging+AFError.swift in Sources */,
@@ -410,10 +423,13 @@
 				F1019C612A099D8D0098FF3C /* String+ToLocalize.swift in Sources */,
 				F11BDB792A09B1B200D94977 /* SpecificCorners+CornerRadius.swift in Sources */,
 				F1019C512A0950A10098FF3C /* StringConstants.swift in Sources */,
+				F12008192A0B25F80071E389 /* ArtistView.swift in Sources */,
 				F1019C5D2A0998FB0098FF3C /* CircleProgressView.swift in Sources */,
 				F1019C3A2A0946E50098FF3C /* HeightSize.swift in Sources */,
 				F1019C402A0948E10098FF3C /* FavoriteListView.swift in Sources */,
 				F1019C422A09492C0098FF3C /* ScaleConstants.swift in Sources */,
+				F120081D2A0B26840071E389 /* ArtistService.swift in Sources */,
+				F120081B2A0B266B0071E389 /* ArtistModel.swift in Sources */,
 				F1FAF47E2A09286300C129F8 /* CustomTabBarView.swift in Sources */,
 				F1019C5F2A099D180098FF3C /* LocaleKeys.swift in Sources */,
 				F1019C642A09A6EF0098FF3C /* Title3BoldPinkText.swift in Sources */,

@@ -1,24 +1,27 @@
 //
-//  AlbumModel.swift
+//  ArtistModel.swift
 //  AppcentDeezerCase
 //
-//  Created by Kaan Uzman on 8.05.2023.
+//  Created by Kaan Uzman on 10.05.2023.
 //
+
 
 import Foundation
 
-// MARK: - CategoryModel
-struct CategoryModel: Codable {
-    let data: [Category]?
+// MARK: - ArtistModel
+struct ArtistModel: Codable {
+    let data: [Artist]?
 }
 
 // MARK: - Datum
-struct Category: Codable {
+struct Artist: Codable {
     let id: Int?
     let name: String?
     let picture: String?
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String?
-    let type: String?
+    let radio: Bool?
+    let tracklist: String?
+    let type: TypeEnum?
 
     enum CodingKeys: String, CodingKey {
         case id, name, picture
@@ -26,7 +29,11 @@ struct Category: Codable {
         case pictureMedium
         case pictureBig
         case pictureXl
-        case type
+        case radio, tracklist, type
     }
+}
+
+enum TypeEnum: String, Codable {
+    case artist = "artist"
 }
 

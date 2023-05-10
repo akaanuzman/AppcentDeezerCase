@@ -18,8 +18,8 @@ struct TabBarView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedTab) {
-                CategoryView().tag(TabEnum.musicNote)
-                FavoriteListView().tag(TabEnum.heartFill)
+                ArtistView(artistViewModel: ArtistViewModel(genreId: "116")).tag(TabEnum.musicNote)
+                CategoryView().tag(TabEnum.heartFill)
             }
             VStack {
                 Spacer()

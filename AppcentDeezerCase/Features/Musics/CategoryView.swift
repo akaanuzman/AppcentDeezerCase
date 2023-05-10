@@ -9,10 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct CategoryView: View {
-    @StateObject var categoryViewModel : CategoryViewModel =
-    CategoryViewModel(categoryService: CategoryService())
-    
-   
+    @StateObject var categoryViewModel : CategoryViewModel = CategoryViewModel()
     
     var body: some View {
         let categories : CategoryModel? = categoryViewModel.categories
@@ -37,7 +34,8 @@ struct CategoryView_Previews: PreviewProvider {
     }
 }
 
-struct GridView: View {
+/// MARK: MAKE COMPONENT
+private struct GridView: View {
     private let adaptiveColumns = [ GridItem(.adaptive(minimum: 200)) ]
     let categories : CategoryModel
     var body: some View {
