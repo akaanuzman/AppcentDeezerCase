@@ -27,12 +27,4 @@ class ArtistService {
         response.error?.showError()
         return response.value
     }
-    
-    /// Fetch only one artist information (albums,songs) from by tracklist parameter inside artist API
-    func fetchArtistAlbums(tracklist: String) async -> AlbumModel? {
-        let request = AF.request(tracklist).serializingDecodable(AlbumModel.self)
-        let response = await request.response
-        response.error?.showError()
-        return response.value
-    }
 }

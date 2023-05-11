@@ -22,8 +22,7 @@ struct ArtistsView: View {
                             ForEach(artists!.data!, id: \.id) {
                                 artist in
                                 NavigationLink(destination:
-                                                AlbumView(artistInfoViewModel: ArtistInfoViewModel(artistId: String(artist.id ?? 0),
-                                                        tracklist: artist.tracklist ?? ""))) {
+                                                AlbumView(artistInfoViewModel: ArtistInfoViewModel(artistId: String(artist.id ?? 0)))) {
                                     ImageCardView(imageUrl: artist.picture ?? "",
                                                        title: artist.name ?? "")
                                 }
@@ -38,11 +37,6 @@ struct ArtistsView: View {
                                 Title3BoldPinkText(title: categoryName.locale())
                             }
                         }
-                        // text style for cards
-                        .font(.title3)
-                        .bold()
-                        .foregroundColor(.white)
-                        .accentColor(.pink) // for back button color
             }
         } else {
            CircleProgressView()

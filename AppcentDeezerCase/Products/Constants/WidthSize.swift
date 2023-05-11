@@ -8,5 +8,6 @@
 import Foundation
 
 struct WidthSize {
+    static let lowImageWidth : Double = 60.0
     static let imageAndRectangleWidth : Double = 195.0
 }

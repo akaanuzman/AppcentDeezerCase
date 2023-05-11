@@ -11,38 +11,28 @@ import Kingfisher
 struct AlbumView: View {
     @StateObject var artistInfoViewModel : ArtistInfoViewModel
     
-    // MARK: remove ArtistAlbum with duplicate album id
-    func filterAlbum(albums: [ArtistAlbum]) -> [ArtistAlbum] {
-        print(Array(Set(albums)).count)
-        return Array(Set(albums))
-    }
-
     var body: some View {
         let artist : ArtistModel? = artistInfoViewModel.artist
         let albums : AlbumModel? = artistInfoViewModel.albums
         if artist != nil && albums != nil {
             VStack {
-                KFImage(URL(string: artist!.picture ?? ""))
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: HeightSize.imgHeight)
+                ArtistImageView(imageUrl: artist!.picture ?? "")
                 if albums!.data != nil {
-                    let filteredAlbum = filterAlbum(albums: albums!.data!)
-                    List(filteredAlbum, id: \.id) {
+                    List(albums!.data!, id: \.id) {
                         album in
                         Section {
                             HStack {
-                                KFImage(URL(string: album.album?.cover ?? ""))
-                                    .resizable().aspectRatio(contentMode: .fill)
-                                    .scaledToFill()
-                                    .frame(width: 60,height: 60).clipped()
-                                Text(album.album?.title ?? "")
+                                AlbumImageView(imageUrl: album.cover ?? "")
+                                VStack(alignment: .leading) {
+                                    Text(album.title ?? "null")
+                                    Text(album.release_date ?? "null")
+                                }.padding(.horizontal)
                                 Spacer()
                             }
-                        }.listRowBackground(Color.pink)
-                            .listRowInsets(EdgeInsets())
                             
-                    }.scrollContentBackground(.hidden)
+                        }.listRowBackground(Color.pink) // list item bg color
+                            .listRowInsets(EdgeInsets()) // remove list padding
+                    }.scrollContentBackground(.hidden) // list bg color hidden
                         .listStyle(.insetGrouped)
                 }
                 
@@ -64,7 +54,6 @@ struct AlbumView: View {
 struct AlbumView_Previews: PreviewProvider {
     static var previews: some View {
         AlbumView(artistInfoViewModel:
-                        ArtistInfoViewModel(artistId: "8354140",
-                                            tracklist: "https://api.deezer.com/artist/8354140/top?limit=50"))
+                    ArtistInfoViewModel(artistId: "8354140"))
     }
 }

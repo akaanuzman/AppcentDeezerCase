@@ -10,19 +10,18 @@ import Foundation
 
 class ArtistInfoViewModel: ObservableObject {
     let artistService : ArtistService = ArtistService()
+    let albumService : AlbumService = AlbumService()
     let artistId : String
-    let tracklist : String
     
     @Published var artist: ArtistModel?
     @Published var albums : AlbumModel?
     
-    init(artistId: String ,tracklist: String ,artist: ArtistModel? = nil) {
+    init(artistId: String, artist: ArtistModel? = nil) {
         self.artistId = artistId
-        self.tracklist = tracklist
         self.artist = artist
         Task.detached {
             await self.fetchArtist(artistId: self.artistId)
-            await self.fetchWholeAlbums(tracklist: tracklist)
+            await self.fetchWholeAlbums(artistId: self.artistId)
         }
     }
     
@@ -30,7 +29,7 @@ class ArtistInfoViewModel: ObservableObject {
         artist = await artistService.fetchArtist(artistId: artistId)
     }
     
-    func fetchWholeAlbums(tracklist: String) async {
-        albums = await artistService.fetchArtistAlbums(tracklist: tracklist)
+    func fetchWholeAlbums(artistId: String) async {
+        albums = await albumService.fetchArtistAlbums(artistId: artistId)
     }
 }
