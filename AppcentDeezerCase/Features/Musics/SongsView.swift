@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SongsView: View {
     @State var songViewModel : SongViewModel
+    
     var body: some View {
         let songs : SongModel? = songViewModel.songs
         if songs != nil {
@@ -26,6 +28,8 @@ struct SongsView: View {
                             Image(systemName: "heart")
                                 .padding(.horizontal)
                         }
+                    }.onTapGesture {
+                        songViewModel.playMusic(song: song.preview ?? "")
                     }.listRowBackground(Color.pink) // list item bg color
                         .listRowInsets(EdgeInsets()) // remove list padding
                 }.scrollContentBackground(.hidden) // list bg color hidden
