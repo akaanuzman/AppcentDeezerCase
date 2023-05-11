@@ -2,13 +2,13 @@ import Foundation
 
 // MARK: - AlbumModel
 struct AlbumModel: Codable {
-    let data: [Album]?
+    let data: [AlbumData]?
     let total: Int?
     let next: String?
 }
 
 // MARK: - Datum
-struct Album: Codable {
+struct AlbumData: Codable {
     let id: Int?
     let title: String?
     let link, cover: String?

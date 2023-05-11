@@ -21,7 +21,7 @@ struct ArtistsData: Codable {
     let pictureSmall, pictureMedium, pictureBig, pictureXl: String?
     let radio: Bool?
     let tracklist: String?
-    let type: TypeEnum?
+    let type: ArtistTypeEnum?
 
     enum CodingKeys: String, CodingKey {
         case id, name, picture
@@ -33,7 +33,7 @@ struct ArtistsData: Codable {
     }
 }
 
-enum TypeEnum: String, Codable {
+enum ArtistTypeEnum: String, Codable {
     case artist = "artist"
 }
 
