@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabBarView: View {
-    @Binding var selectedTab : TabEnum
+    @Binding var selectedTab: TabEnum
     
     func getScale(tab: TabEnum) -> Double {
         selectedTab == tab ? ScaleConstants.low : ScaleConstants.xLow
@@ -22,7 +22,7 @@ struct CustomTabBarView: View {
         selectedTab == tab ? .white : .gray
     }
     
-    func selectTab(tab: TabEnum) -> Void {
+    func selectTab(tab: TabEnum) {
         withAnimation(.easeIn(duration: DurationConstants.low)) {
             selectedTab = tab
         }
@@ -49,8 +49,8 @@ struct CustomTabBarView: View {
             .font(getFont(tab: tab))
             .foregroundColor(getBgColor(tab: tab))
             .onTapGesture {
-               selectTab(tab: tab)
-        }
+                selectTab(tab: tab)
+            }
     }
 }
 

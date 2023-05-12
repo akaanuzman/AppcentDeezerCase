@@ -5,18 +5,18 @@
 //  Created by Kaan Uzman on 11.05.2023.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 
 class SongViewModel: ObservableObject {
-    let songService : SongService = SongService()
-    let albumId : String
+    let songService: SongService = .init()
+    let albumId: String
     
     @Published var songs: SongModel?
-    @Published var player : AVPlayer?
-    @Published var isStart : Bool = true
+    @Published var player: AVPlayer?
+    @Published var isStart: Bool = true
     
-    init(albumId: String ,songs: SongModel? = nil) {
+    init(albumId: String, songs: SongModel? = nil) {
         self.albumId = albumId
         self.songs = songs
         Task.detached {
@@ -41,5 +41,5 @@ class SongViewModel: ObservableObject {
             player?.pause()
         }
         isStart.toggle()
-   }
+    }
 }

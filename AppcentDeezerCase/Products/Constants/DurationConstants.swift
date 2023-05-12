@@ -5,6 +5,6 @@
 //  Created by Kaan Uzman on 8.05.2023.
 //
 
-struct DurationConstants {
-    static let low : Double = 0.3
+enum DurationConstants: Double {
+    case low = 0.3
 }

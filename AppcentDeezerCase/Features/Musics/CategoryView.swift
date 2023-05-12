@@ -5,50 +5,49 @@
 //  Created by Kaan Uzman on 8.05.2023.
 //
 
-import SwiftUI
 import Kingfisher
+import SwiftUI
 
 struct CategoryView: View {
-    @StateObject var categoryViewModel : CategoryViewModel = CategoryViewModel()
-    private let adaptiveColumns = [ GridItem(.adaptive(minimum: 200)) ]
-    
+    @StateObject var categoryViewModel: CategoryViewModel = .init()
+    private let adaptiveColumns = [GridItem(.adaptive(minimum: 200))]
+
     var body: some View {
-        let categories : CategoryModel? = categoryViewModel.categories
-        if categories != nil {
+        let categoryModel: CategoryModel? = categoryViewModel.categories
+        if let category = categoryModel {
             /// if the album's data returns empty
-            if categories!.data != nil {
+            if let categoryData = category.data {
                 NavigationView {
                     ScrollView {
                         LazyVGrid(columns: adaptiveColumns) {
-                                ForEach(categories!.data!, id: \.id) {
-                                    category in
-                                    NavigationLink(destination:
-                                                    ArtistsView(artistsViewModel:
-                                                                    ArtistsViewModel(genreId: String(category.id ?? 0)),
-                                                                categoryName: category.name ?? "")) {
-                                        ImageCardView(imageUrl: category.picture ?? "",
-                                                title: category.name ?? "")
-                                        }
+                            ForEach(categoryData, id: \.id) {
+                                category in
+                                NavigationLink(destination:
+                                    ArtistsView(artistsViewModel:
+                                        ArtistsViewModel(genreId: String(category.id ?? 0)),
+                                        categoryName: category.name ?? ""))
+                                {
+                                    ImageCardView(imageUrl: category.picture ?? "",
+                                                  title: category.name ?? "")
                                 }
+                            }
                         }
                     }.padding(.bottom,
-                          PaddingConstants.Bottom.high.rawValue)
-                    .navigationTitle("")  // hide back button's text
-                    // for app bar title exp: (Artists)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Title3BoldPinkText(title: LocaleKeys.categories.locale())
+                              PaddingConstants.Bottom.high.rawValue)
+                        .navigationTitle("") // hide back button's text
+                        // for app bar title exp: (Artists)
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                Title3BoldPinkText(title: LocaleKeys.categories.locale())
+                            }
                         }
-                    }
                 }.font(.title3)
                     .bold()
                     .foregroundColor(.white)
                     .accentColor(.pink) // for back button color
-                    
-                    
             }
         } else {
-           CircleProgressView()
+            CircleProgressView()
         }
     }
 }

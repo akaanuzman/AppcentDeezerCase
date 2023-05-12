@@ -14,7 +14,7 @@ extension GeometryProxy {
     func dynamicHeight(height: Double) -> Double {
         return size.height * height
     }
-    
+
     /// Dyanmic width by device
     /// - Parameter width: Percent value
     /// - Returns: Calculated value for device width

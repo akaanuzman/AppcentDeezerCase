@@ -5,11 +5,11 @@
 //  Created by Kaan Uzman on 10.05.2023.
 //
 
-import SwiftUI
 import Kingfisher
+import SwiftUI
 
 struct ImageView: View {
-    let imageUrl : String
+    let imageUrl: String
     var body: some View {
         KFImage(URL(string: imageUrl))
             .resizable()
@@ -18,7 +18,7 @@ struct ImageView: View {
                    height: HeightSize.imgHeight)
             .clipped()
             .cornerRadius(radius: CornerRadius.large,
-                          corners: [.topLeft,.topRight])
+                          corners: [.topLeft, .topRight])
     }
 }
 

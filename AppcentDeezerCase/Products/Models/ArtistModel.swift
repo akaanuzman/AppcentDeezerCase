@@ -8,6 +8,7 @@
 import Foundation
 
 // MARK: - ArtistModel
+
 struct ArtistModel: Codable {
     let id: Int?
     let name: String?

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State private var selectedTab : TabEnum = .musicNote
-    
-        init() {
-            // hides the bottom blank white tabbar
-            UITabBar.appearance().isHidden = true
-        }
-            
+    @State private var selectedTab: TabEnum = .musicNote
+
+    init() {
+        // hides the bottom blank white tabbar
+        UITabBar.appearance().isHidden = true
+    }
+
     var body: some View {
         ZStack {
             TabView(selection: $selectedTab) {
