@@ -11,8 +11,8 @@ struct RoundedRectangleView: View {
     var body: some View {
         Rectangle()
             .frame(width: WidthSize.imageAndRectangleWidth,
-                   height: HeightSize.rectangleHeight)
+                   height: HeightSize.rectangle.rawValue)
             .foregroundColor(.pink)
-            .cornerRadius(CornerRadius.large)
+            .cornerRadius(CornerRadius.large.rawValue)
     }
 }

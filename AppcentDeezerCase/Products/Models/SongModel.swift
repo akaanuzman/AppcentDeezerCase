@@ -1,34 +1,31 @@
 import Foundation
 
 // MARK: - SongModel
-
 struct SongModel: Codable {
-    let tracks: Tracks?
+    var tracks: Tracks?
 }
 
 // MARK: - Tracks
-
 struct Tracks: Codable {
-    let data: [Datum]?
+    var data: [Datum]?
 }
 
 // MARK: - Datum
-
 struct Datum: Codable {
-    let id: Int?
-    let readable: Bool?
-    let title, titleShort, titleVersion: String?
-    let link: String?
-    let duration, rank: Int?
-    let explicitLyrics: Bool?
-    let explicitContentLyrics, explicitContentCover: Int?
-    let preview: String?
-    let md5Image: String?
-    let artist: Artist?
-    let album: Album?
-    let type: String?
-    var timeValue: String = "00:00"
+    var id: Int?
+    var readable: Bool?
+    var title, titleShort, titleVersion: String?
+    var link: String?
+    var duration, rank: Int?
+    var explicitLyrics: Bool?
+    var explicitContentLyrics, explicitContentCover: Int?
+    var preview: String?
+    var md5Image: String?
+    var artist: Artist?
+    var album: Album?
+    var type: String?
     var isFav: Bool = false
+    var timerValue: String = "00:00"
 
     enum CodingKeys: String, CodingKey {
         case id, readable, title
@@ -45,15 +42,14 @@ struct Datum: Codable {
 }
 
 // MARK: - Album
-
 struct Album: Codable {
-    let id: Int?
-    let title: String?
-    let cover: String?
-    let coverSmall, coverMedium, coverBig, coverXl: String?
-    let md5Image: String?
-    let tracklist: String?
-    let type: String?
+    var id: Int?
+    var title: String?
+    var cover: String?
+    var coverSmall, coverMedium, coverBig, coverXl: String?
+    var md5Image: String?
+    var tracklist: String?
+    var type: String?
 
     enum CodingKeys: String, CodingKey {
         case id, title, cover
@@ -67,10 +63,9 @@ struct Album: Codable {
 }
 
 // MARK: - Artist
-
 struct Artist: Codable {
-    let id: Int?
-    let name: String?
-    let tracklist: String?
-    let type: String?
+    var id: Int?
+    var name: String?
+    var tracklist: String?
+    var type: String?
 }

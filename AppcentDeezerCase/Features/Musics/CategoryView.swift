@@ -32,19 +32,10 @@ struct CategoryView: View {
                                 }
                             }
                         }
-                    }.padding(.bottom,
-                              PaddingConstants.Bottom.high.rawValue)
+                    }
+                    .modifier(ToolbarAndBottomPadding(title: LocaleKeys.categories.rawValue))
                         .navigationTitle("") // hide back button's text
-                        // for app bar title exp: (Artists)
-                        .toolbar {
-                            ToolbarItem(placement: .principal) {
-                                Title3BoldPinkText(title: LocaleKeys.categories.locale())
-                            }
-                        }
-                }.font(.title3)
-                    .bold()
-                    .foregroundColor(.white)
-                    .accentColor(.pink) // for back button color
+                }.modifier(FontStyle())
             }
         } else {
             CircleProgressView()

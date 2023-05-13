@@ -12,7 +12,7 @@ struct CircleProgressView: View {
         VStack {
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: .pink))
-            Title3BoldPinkText(title: LocaleKeys.loading.locale())
+            Title3BoldPinkText(title: LocaleKeys.loading.rawValue.locale())
         }
     }
 }

@@ -15,7 +15,7 @@ struct AlbumImageView: View {
             .resizable().aspectRatio(contentMode: .fill)
             .scaledToFill()
             .frame(width: WidthSize.lowImageWidth,
-                   height: HeightSize.lowImgHeight)
+                   height: HeightSize.lowImg.rawValue)
             .clipped()
     }
 }

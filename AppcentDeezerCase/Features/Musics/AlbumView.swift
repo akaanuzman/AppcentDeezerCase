@@ -34,21 +34,12 @@ struct AlbumView: View {
                                     Spacer()
                                 }
                             }
-                        }.listRowBackground(Color.pink) // list item bg color
-                            .listRowInsets(EdgeInsets()) // remove list padding
+                        }.modifier(AlbumItemStyle())
                     }.scrollContentBackground(.hidden) // list bg color hidden
-                        .listStyle(.insetGrouped)
                 }
             }.frame(maxWidth: .infinity)
-                .padding(.bottom,
-                         PaddingConstants.Bottom.high.rawValue)
+                .modifier(ToolbarAndBottomPadding(title: artist.name ?? ""))
                 .navigationTitle("") // hide back button's text
-                // for app bar title exp: (Artists)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Title3BoldPinkText(title: artist.name?.locale() ?? "")
-                    }
-                }
         } else {
             CircleProgressView()
         }

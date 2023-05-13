@@ -15,9 +15,9 @@ struct ImageView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: WidthSize.imageAndRectangleWidth,
-                   height: HeightSize.imgHeight)
+                   height: HeightSize.normalImg.rawValue)
             .clipped()
-            .cornerRadius(radius: CornerRadius.large,
+            .cornerRadius(radius: CornerRadius.large.rawValue,
                           corners: [.topLeft, .topRight])
     }
 }

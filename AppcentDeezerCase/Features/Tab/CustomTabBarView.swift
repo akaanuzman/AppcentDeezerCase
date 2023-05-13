@@ -11,7 +11,7 @@ struct CustomTabBarView: View {
     @Binding var selectedTab: TabEnum
     
     func getScale(tab: TabEnum) -> Double {
-        selectedTab == tab ? ScaleConstants.low : ScaleConstants.xLow
+        selectedTab == tab ? ScaleConstants.low.rawValue : ScaleConstants.xLow.rawValue
     }
     
     func getFont(tab: TabEnum) -> Font {
@@ -23,7 +23,7 @@ struct CustomTabBarView: View {
     }
     
     func selectTab(tab: TabEnum) {
-        withAnimation(.easeIn(duration: DurationConstants.low)) {
+        withAnimation(.easeIn(duration: DurationConstants.low.rawValue)) {
             selectedTab = tab
         }
     }
@@ -36,9 +36,9 @@ struct CustomTabBarView: View {
                     tabImage(tab: tab)
                     Spacer()
                 }
-            }.frame(height: HeightSize.tabHeight)
+            }.frame(height: HeightSize.tab.rawValue)
                 .background(.pink)
-                .cornerRadius(CornerRadius.large)
+                .cornerRadius(CornerRadius.large.rawValue)
                 .padding()
         }
     }

@@ -14,7 +14,7 @@ struct ArtistImageView: View {
         KFImage(URL(string: imageUrl))
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(height: HeightSize.imgHeight)
+            .frame(height: HeightSize.normalImg.rawValue)
     }
 }
 

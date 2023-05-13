@@ -29,15 +29,8 @@ struct ArtistsView: View {
                             }
                         }
                     }
-                }.padding(.bottom,
-                          PaddingConstants.Bottom.high.rawValue)
+                }.modifier(ToolbarAndBottomPadding(title: categoryName))
                     .navigationTitle("") // hide back button's text
-                    // for app bar title exp: (Artists)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Title3BoldPinkText(title: categoryName.locale())
-                        }
-                    }
             }
         } else {
             CircleProgressView()
