@@ -5,53 +5,64 @@
 //  Created by Kaan Uzman on 11.05.2023.
 //
 
-import AVFoundation
 import Foundation
 
 class SongViewModel: ObservableObject {
     let songService: SongService = .init()
     let albumId: String
-    
+    let favListStorageService: FavListStorageService = .init()
+
+
     @Published var songs: Tracks?
-    @Published var player: AVPlayer?
-    @Published var isStart: Bool = true
     @Published var favoriteSongs: [FavoriteSongModel] = []
 
-    
     init(albumId: String, songs: Tracks? = nil) {
         self.albumId = albumId
         self.songs = songs
+        loadFavSongsFromStorage()
         Task.detached {
             await self.fetchWholeSongs(albumId: self.albumId)
         }
     }
     
+    func loadFavSongsFromStorage() {
+        favoriteSongs = favListStorageService.getStorage()
+    }
+
     func fetchWholeSongs(albumId: String) async {
         songs = await songService.fetchSongs(albumId: albumId)?.tracks
     }
-    
-    func playMusic(song: String) {
-        guard let url = URL(string: song) else {
-            print("Resource not found: \(song)")
-            return
-        }
-        let playerItem = AVPlayerItem(url: url)
-        player = AVPlayer(playerItem: playerItem)
-        if isStart {
-            player?.play()
-        } else {
-            player?.pause()
-        }
-        isStart.toggle()
-    }
-    
+
     func toggleFavorite(song: Datum) {
         if let index = favoriteSongs.firstIndex(where: { $0.song.id == song.id }) {
             favoriteSongs.remove(at: index)
+            print("remove")
+            favListStorageService.addStorage(songs: favoriteSongs)
             songs?.data?[songs?.data?.firstIndex(where: { $0.id == song.id })! ?? 0].isFav = false
         } else {
-            favoriteSongs.append(FavoriteSongModel(id: UUID().uuidString, song: song))
-            songs?.data?[songs?.data?.firstIndex(where: { $0.id == song.id })! ?? 0].isFav = true
+            if let index = songs?.data?.firstIndex(where: { $0.id == song.id }) {
+                songs?.data?[index].isFav = true
+                let newSong = songs?.data?[index] ?? Datum()
+                let newFavSong = FavoriteSongModel(id: UUID().uuidString, song: newSong)
+                favoriteSongs.append(newFavSong)
+                print("add")
+                favListStorageService.addStorage(songs: favoriteSongs)
+            }
+        }
+    }
+    
+    func getFavIcon(song: Datum) -> String {
+        if !favoriteSongs.isEmpty {
+            if favoriteSongs.firstIndex(where: { $0.song.id == song.id }) != nil {
+                return ImageConstants.heartFill.rawValue
+            }
+            else {
+                return ImageConstants.heart.rawValue
+            }
+        } else if song.isFav {
+            return ImageConstants.heartFill.rawValue
+        } else {
+            return ImageConstants.heart.rawValue
         }
     }
 }

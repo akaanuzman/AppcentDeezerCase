@@ -43,6 +43,10 @@
 		F120081D2A0B26840071E389 /* ArtistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120081C2A0B26840071E389 /* ArtistService.swift */; };
 		F120081F2A0B28350071E389 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120081E2A0B28350071E389 /* ArtistsViewModel.swift */; };
 		F1329EC72A0DA40F008D074E /* SplitTime+CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1329EC62A0DA40F008D074E /* SplitTime+CMTime.swift */; };
+		F187F1422A10396F0095FACD /* FavListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1412A10396F0095FACD /* FavListViewModel.swift */; };
+		F187F1442A103A370095FACD /* FavListStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1432A103A370095FACD /* FavListStorageService.swift */; };
+		F187F1462A1064990095FACD /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1452A1064990095FACD /* AudioViewModel.swift */; };
+		F187F1482A106F3F0095FACD /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1472A106F3F0095FACD /* ImageConstants.swift */; };
 		F1A1EE2A2A0C13F500860246 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE292A0C13F500860246 /* AlbumView.swift */; };
 		F1A1EE2C2A0C16C500860246 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE2B2A0C16C500860246 /* ArtistModel.swift */; };
 		F1A1EE2E2A0C1B2300860246 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE2D2A0C1B2300860246 /* AlbumViewModel.swift */; };
@@ -99,6 +103,10 @@
 		F120081C2A0B26840071E389 /* ArtistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistService.swift; sourceTree = "<group>"; };
 		F120081E2A0B28350071E389 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		F1329EC62A0DA40F008D074E /* SplitTime+CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplitTime+CMTime.swift"; sourceTree = "<group>"; };
+		F187F1412A10396F0095FACD /* FavListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListViewModel.swift; sourceTree = "<group>"; };
+		F187F1432A103A370095FACD /* FavListStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListStorageService.swift; sourceTree = "<group>"; };
+		F187F1452A1064990095FACD /* AudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
+		F187F1472A106F3F0095FACD /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		F1A1EE292A0C13F500860246 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		F1A1EE2B2A0C16C500860246 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		F1A1EE2D2A0C1B2300860246 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 				F120081C2A0B26840071E389 /* ArtistService.swift */,
 				F118F5482A0C6AC700FAA632 /* AlbumService.swift */,
 				F118F54E2A0C74FE00FAA632 /* SongService.swift */,
+				F187F1432A103A370095FACD /* FavListStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -164,6 +173,8 @@
 				F120081E2A0B28350071E389 /* ArtistsViewModel.swift */,
 				F1A1EE2D2A0C1B2300860246 /* AlbumViewModel.swift */,
 				F118F5502A0C757600FAA632 /* SongViewModel.swift */,
+				F187F1412A10396F0095FACD /* FavListViewModel.swift */,
+				F187F1452A1064990095FACD /* AudioViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 				F1AA468F2A0B02BA00CBA32E /* PaddingConstants.swift */,
 				F1AA46912A0B03AB00CBA32E /* SpacerConstants.swift */,
 				F1AA46932A0B071D00CBA32E /* WidthSize.swift */,
+				F187F1472A106F3F0095FACD /* ImageConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -473,6 +485,7 @@
 				F1D942692A0EE5730070BDF9 /* ToolbarAndBottomPadding.swift in Sources */,
 				F1FAF4732A09275A00C129F8 /* DynamicValue+GeometryProxy.swift in Sources */,
 				F120081F2A0B28350071E389 /* ArtistsViewModel.swift in Sources */,
+				F187F1482A106F3F0095FACD /* ImageConstants.swift in Sources */,
 				F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */,
 				F1019C382A0946230098FF3C /* TabBarView.swift in Sources */,
 				F1A1EE2E2A0C1B2300860246 /* AlbumViewModel.swift in Sources */,
@@ -488,6 +501,7 @@
 				F1019C3E2A0948D00098FF3C /* CategoryView.swift in Sources */,
 				F1D9426D2A0EED990070BDF9 /* AlbumItemStyle.swift in Sources */,
 				F1019C362A093E390098FF3C /* CornerRadius.swift in Sources */,
+				F187F1462A1064990095FACD /* AudioViewModel.swift in Sources */,
 				F1019C562A0951470098FF3C /* CategoryViewModel.swift in Sources */,
 				F1019C4A2A094EC30098FF3C /* CategoryModel.swift in Sources */,
 				F1AA46922A0B03AB00CBA32E /* SpacerConstants.swift in Sources */,
@@ -501,6 +515,7 @@
 				F12008192A0B25F80071E389 /* ArtistsView.swift in Sources */,
 				F1019C5D2A0998FB0098FF3C /* CircleProgressView.swift in Sources */,
 				F118F5492A0C6AC700FAA632 /* AlbumService.swift in Sources */,
+				F187F1422A10396F0095FACD /* FavListViewModel.swift in Sources */,
 				F1019C3A2A0946E50098FF3C /* HeightSize.swift in Sources */,
 				F1019C402A0948E10098FF3C /* FavoriteListView.swift in Sources */,
 				F1019C422A09492C0098FF3C /* ScaleConstants.swift in Sources */,
@@ -514,6 +529,7 @@
 				F1AA469C2A0B09C800CBA32E /* ImageCardView.swift in Sources */,
 				F1019C3C2A0947E40098FF3C /* DurationConstants.swift in Sources */,
 				F118F54D2A0C717600FAA632 /* SongModel.swift in Sources */,
+				F187F1442A103A370095FACD /* FavListStorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

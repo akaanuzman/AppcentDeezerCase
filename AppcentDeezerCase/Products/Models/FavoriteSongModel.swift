@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FavoriteSongModel: Identifiable {
+struct FavoriteSongModel: Identifiable, Codable {
     let id: String
-    let song: Datum
+    var song: Datum
 }

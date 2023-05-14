@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SongsView: View {
     @StateObject var songViewModel: SongViewModel
+    @StateObject var audioViewModel: AudioViewModel = .init()
     @State var formattedTimerValue: String = "00:00"
 
     let timer = Timer.publish(every: 0.01, on: .main, in: .common)
@@ -30,17 +31,17 @@ struct SongsView: View {
                                     Text(formattedTimerValue)
                                 }.padding(.horizontal)
                                 Spacer()
-                                Image(systemName: song.isFav ? "heart.fill" : "heart")
+                                Image(systemName: songViewModel.getFavIcon(song: song))
                                     .padding(.horizontal).onTapGesture {
                                         songViewModel.toggleFavorite(song: song)
                                     }
                             }
                         }.onTapGesture {
-                            songViewModel.playMusic(song: song.preview ?? "")
+                            audioViewModel.playMusic(song: song.preview ?? "")
 
                         }.onReceive(timer) {
                             _ in
-                            guard let player = songViewModel.player else { return }
+                            guard let player = audioViewModel.player else { return }
                             let time = player.currentTime()
                             formattedTimerValue = String(time.positionalTime)
                         }
@@ -48,6 +49,9 @@ struct SongsView: View {
                     })
                 }
                 .modifier(ToolbarAndBottomPadding(title: songsData.first?.album?.title ?? ""))
+                .onAppear{
+                    songViewModel.loadFavSongsFromStorage()
+                }
             }
         } else {
             CircleProgressView()
