@@ -5,16 +5,16 @@
 //  Created by Kaan Uzman on 11.05.2023.
 //
 
-import SwiftUI
 import Kingfisher
+import SwiftUI
 
 struct ArtistImageView: View {
-    let imageUrl : String
+    let imageUrl: String
     var body: some View {
         KFImage(URL(string: imageUrl))
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(height: HeightSize.imgHeight)
+            .frame(height: HeightSize.normalImg.rawValue)
     }
 }
 

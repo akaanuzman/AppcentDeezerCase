@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TabEnum : String, CaseIterable {
+enum TabEnum: String, CaseIterable {
     case musicNote = "music.note"
     case heartFill = "heart.fill"
 }

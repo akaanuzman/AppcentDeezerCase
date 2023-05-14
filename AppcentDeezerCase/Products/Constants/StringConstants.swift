@@ -8,5 +8,5 @@
 import Foundation
 
 struct StringConstants {
-    static let baseUrl : String = "https://api.deezer.com/"
+    static let baseUrl: String = "https://api.deezer.com/"
 }

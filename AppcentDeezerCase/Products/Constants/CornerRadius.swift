@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct CornerRadius {
-    static let xLow : Double = 4.0
-    static let low : Double = 8.0
-    static let medium : Double = 12.0
-    static let large : Double = 16.0
+enum CornerRadius: Double {
+    case xLow = 4.0
+    case low = 8.0
+    case medium = 12.0
+    case large = 16.0
 }

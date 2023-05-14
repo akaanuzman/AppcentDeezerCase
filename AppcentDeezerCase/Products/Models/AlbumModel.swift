@@ -1,13 +1,15 @@
 import Foundation
 
 // MARK: - AlbumModel
+
 struct AlbumModel: Codable {
     let data: [AlbumData]?
     let total: Int?
     let next: String?
 }
 
-// MARK: - Datum
+// MARK: - AlbumData
+
 struct AlbumData: Codable {
     let id: Int?
     let title: String?
@@ -39,6 +41,6 @@ struct AlbumData: Codable {
 }
 
 enum RecordTypeEnum: String, Codable {
-    case album = "album"
-    case single = "single"
+    case album
+    case single
 }

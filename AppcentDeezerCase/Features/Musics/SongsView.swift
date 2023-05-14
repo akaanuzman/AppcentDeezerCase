@@ -5,38 +5,55 @@
 //  Created by Kaan Uzman on 11.05.2023.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct SongsView: View {
-    @State var songViewModel : SongViewModel
+    @StateObject var songViewModel: SongViewModel
+    @StateObject var audioViewModel: AudioViewModel = .init()
+    @State var formattedTimerValue: String = "00:00"
+
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common)
+        .autoconnect()
+    
+    func startTimer() {
+        guard let player = audioViewModel.player else { return }
+        let time = player.currentTime()
+        formattedTimerValue = String(time.positionalTime)
+    }
+
     var body: some View {
-        let songs : SongModel? = songViewModel.songs
-        if songs != nil {
-            if songs!.tracks != nil && songs!.tracks!.data != nil {
-                List(songs!.tracks!.data!,id: \.id) {
-                    song in
-                    Section {
-                        HStack {
-                            AlbumImageView(imageUrl: song.album?.cover ?? "")
-                            VStack(alignment: .leading) {
-                                Text(song.title ?? "null")
-                                Text("0:00")
-                            }.padding(.horizontal)
-                            Spacer()
-                            Image(systemName: "heart")
-                                .padding(.horizontal)
+        let tracks: Tracks? = songViewModel.songs
+        if let songs = tracks {
+            if let songsData = songs.data {
+                ScrollView {
+                    ForEach(songsData, id: \.id, content: { song in
+                        VStack {
+                            HStack {
+                                AlbumImageView(imageUrl: song.album?.cover ?? "")
+                                VStack(alignment: .leading) {
+                                    Text(song.title ?? "null")
+                                        .lineLimit(1)
+                                    Text(formattedTimerValue)
+                                }.padding(.horizontal)
+                                Spacer()
+                                Image(systemName: songViewModel.getFavIcon(song: song))
+                                    .padding(.horizontal).onTapGesture {
+                                        songViewModel.toggleFavorite(song: song)
+                                    }
+                            }
+                        }.onTapGesture {
+                            audioViewModel.playMusic(song: song.preview ?? "")
+                        }.onReceive(timer) {
+                            _ in
+                            startTimer()
                         }
-                    }.listRowBackground(Color.pink) // list item bg color
-                        .listRowInsets(EdgeInsets()) // remove list padding
-                }.scrollContentBackground(.hidden) // list bg color hidden
-                    .listStyle(.insetGrouped)
-                    .padding(.bottom,
-                          PaddingConstants.Bottom.high.rawValue)
-                    // for app bar title exp: (Artists)
-                    .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Title3BoldPinkText(title: songs!.title?.locale() ?? "")
-                    }
+                        .modifier(SongItemStyle())
+                    })
+                }
+                .modifier(ToolbarAndBottomPadding(title: songsData.first?.album?.title ?? ""))
+                .onAppear{
+                    songViewModel.loadFavSongsFromStorage()
                 }
             }
         } else {
@@ -48,6 +65,6 @@ struct SongsView: View {
 struct SongsView_Previews: PreviewProvider {
     static var previews: some View {
         SongsView(songViewModel:
-                    SongViewModel(albumId: "168136152"))
+            SongViewModel(albumId: "168136152"))
     }
 }

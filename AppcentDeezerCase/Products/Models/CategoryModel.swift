@@ -8,11 +8,13 @@
 import Foundation
 
 // MARK: - CategoryModel
+
 struct CategoryModel: Codable {
     let data: [Category]?
 }
 
 // MARK: - Datum
+
 struct Category: Codable {
     let id: Int?
     let name: String?
@@ -29,4 +31,3 @@ struct Category: Codable {
         case type
     }
 }
-

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ImageCardView: View {
-    let imageUrl : String
-    let title : String
+    let imageUrl: String
+    let title: String
     var body: some View {
         ZStack {
             RoundedRectangleView()
@@ -25,6 +25,6 @@ struct ImageCardView: View {
 struct ImageCarView_Previews: PreviewProvider {
     static var previews: some View {
         ImageCardView(imageUrl: "https://picsum.photos/200/300",
-                           title: "deneme")
+                      title: "deneme")
     }
 }

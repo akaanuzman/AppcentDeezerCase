@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Title3BoldPinkText: View {
-    let title : LocalizedStringKey
+    let title: LocalizedStringKey
     var body: some View {
         Text(title)
             .font(.title3)

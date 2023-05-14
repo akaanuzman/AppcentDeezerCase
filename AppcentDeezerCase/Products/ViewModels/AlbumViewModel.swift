@@ -7,15 +7,14 @@
 
 import Foundation
 
-
 class ArtistInfoViewModel: ObservableObject {
-    let artistService : ArtistService = ArtistService()
-    let albumService : AlbumService = AlbumService()
-    let artistId : String
-    
+    let artistService: ArtistService = .init()
+    let albumService: AlbumService = .init()
+    let artistId: String
+
     @Published var artist: ArtistModel?
-    @Published var albums : AlbumModel?
-    
+    @Published var albums: AlbumModel?
+
     init(artistId: String, artist: ArtistModel? = nil) {
         self.artistId = artistId
         self.artist = artist
@@ -24,11 +23,11 @@ class ArtistInfoViewModel: ObservableObject {
             await self.fetchWholeAlbums(artistId: self.artistId)
         }
     }
-    
+
     func fetchArtist(artistId: String) async {
         artist = await artistService.fetchArtist(artistId: artistId)
     }
-    
+
     func fetchWholeAlbums(artistId: String) async {
         albums = await albumService.fetchArtistAlbums(artistId: artistId)
     }

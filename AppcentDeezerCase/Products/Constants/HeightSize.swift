@@ -5,11 +5,10 @@
 //  Created by Kaan Uzman on 8.05.2023.
 //
 
-
-struct HeightSize {
-    static let lowImgHeight : Double = 60.0
-    static let tabHeight : Double = 70.0
-    static let imgHeight : Double = 170.0
-    static let rectangleHeight : Double = 200.0
-    static let largeImgHeight : Double = 300.0
+enum HeightSize: Double {
+    case lowImg = 60.0
+    case tab = 70.0
+    case normalImg = 170.0
+    case rectangle = 200.0
+    case largeImg = 300.0
 }

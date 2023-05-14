@@ -5,15 +5,16 @@
 //  Created by Kaan Uzman on 10.05.2023.
 //
 
-
 import Foundation
 
 // MARK: - ArtistsModel
+
 struct ArtistsModel: Codable {
     let data: [ArtistsData]?
 }
 
-// MARK: - Datum
+// MARK: - ArtistsData
+
 struct ArtistsData: Codable {
     let id: Int?
     let name: String?
@@ -34,6 +35,5 @@ struct ArtistsData: Codable {
 }
 
 enum ArtistTypeEnum: String, Codable {
-    case artist = "artist"
+    case artist
 }
-

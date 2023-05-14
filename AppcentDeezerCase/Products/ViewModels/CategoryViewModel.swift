@@ -8,17 +8,17 @@
 import Foundation
 
 class CategoryViewModel: ObservableObject {
-    let categoryService : CategoryService = CategoryService()
-    
+    let categoryService: CategoryService = .init()
+
     @Published var categories: CategoryModel?
-    
+
     init(categories: CategoryModel? = nil) {
         self.categories = categories
         Task.detached {
             await self.fetchWholeCategories()
         }
     }
-    
+
     func fetchWholeCategories() async {
         categories = await categoryService.fetchCategories()
     }

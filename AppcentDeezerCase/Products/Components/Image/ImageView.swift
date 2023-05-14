@@ -5,20 +5,20 @@
 //  Created by Kaan Uzman on 10.05.2023.
 //
 
-import SwiftUI
 import Kingfisher
+import SwiftUI
 
 struct ImageView: View {
-    let imageUrl : String
+    let imageUrl: String
     var body: some View {
         KFImage(URL(string: imageUrl))
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: WidthSize.imageAndRectangleWidth,
-                   height: HeightSize.imgHeight)
+            .frame(width: WidthSize.imageAndRectangleWidth.rawValue,
+                   height: HeightSize.normalImg.rawValue)
             .clipped()
-            .cornerRadius(radius: CornerRadius.large,
-                          corners: [.topLeft,.topRight])
+            .cornerRadius(radius: CornerRadius.large.rawValue,
+                          corners: [.topLeft, .topRight])
     }
 }
 
