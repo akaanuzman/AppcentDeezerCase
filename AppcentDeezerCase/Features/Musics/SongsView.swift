@@ -15,6 +15,12 @@ struct SongsView: View {
 
     let timer = Timer.publish(every: 0.01, on: .main, in: .common)
         .autoconnect()
+    
+    func startTimer() {
+        guard let player = audioViewModel.player else { return }
+        let time = player.currentTime()
+        formattedTimerValue = String(time.positionalTime)
+    }
 
     var body: some View {
         let tracks: Tracks? = songViewModel.songs
@@ -38,12 +44,9 @@ struct SongsView: View {
                             }
                         }.onTapGesture {
                             audioViewModel.playMusic(song: song.preview ?? "")
-
                         }.onReceive(timer) {
                             _ in
-                            guard let player = audioViewModel.player else { return }
-                            let time = player.currentTime()
-                            formattedTimerValue = String(time.positionalTime)
+                            startTimer()
                         }
                         .modifier(SongItemStyle())
                     })

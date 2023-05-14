@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoryView: View {
     @StateObject var categoryViewModel: CategoryViewModel = .init()
-    private let adaptiveColumns = [GridItem(.adaptive(minimum: 200))]
+    private let adaptiveColumns = [GridItem(.adaptive(minimum: 140))]
 
     var body: some View {
         let categoryModel: CategoryModel? = categoryViewModel.categories

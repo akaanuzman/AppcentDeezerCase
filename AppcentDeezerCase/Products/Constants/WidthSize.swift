@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WidthSize {
-    static let lowImageWidth: Double = 60.0
-    static let imageAndRectangleWidth: Double = 195.0
+enum WidthSize: Double {
+    case lowImageWidth = 60.0
+    case imageAndRectangleWidth = 195.0
 }

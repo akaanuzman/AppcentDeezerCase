@@ -14,7 +14,7 @@ struct ImageView: View {
         KFImage(URL(string: imageUrl))
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: WidthSize.imageAndRectangleWidth,
+            .frame(width: WidthSize.imageAndRectangleWidth.rawValue,
                    height: HeightSize.normalImg.rawValue)
             .clipped()
             .cornerRadius(radius: CornerRadius.large.rawValue,

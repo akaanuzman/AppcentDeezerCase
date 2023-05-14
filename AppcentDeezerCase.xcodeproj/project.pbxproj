@@ -47,6 +47,7 @@
 		F187F1442A103A370095FACD /* FavListStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1432A103A370095FACD /* FavListStorageService.swift */; };
 		F187F1462A1064990095FACD /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1452A1064990095FACD /* AudioViewModel.swift */; };
 		F187F1482A106F3F0095FACD /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1472A106F3F0095FACD /* ImageConstants.swift */; };
+		F187F14A2A107B1C0095FACD /* FavListModif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187F1492A107B1C0095FACD /* FavListModif.swift */; };
 		F1A1EE2A2A0C13F500860246 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE292A0C13F500860246 /* AlbumView.swift */; };
 		F1A1EE2C2A0C16C500860246 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE2B2A0C16C500860246 /* ArtistModel.swift */; };
 		F1A1EE2E2A0C1B2300860246 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1EE2D2A0C1B2300860246 /* AlbumViewModel.swift */; };
@@ -107,6 +108,7 @@
 		F187F1432A103A370095FACD /* FavListStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListStorageService.swift; sourceTree = "<group>"; };
 		F187F1452A1064990095FACD /* AudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
 		F187F1472A106F3F0095FACD /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		F187F1492A107B1C0095FACD /* FavListModif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListModif.swift; sourceTree = "<group>"; };
 		F1A1EE292A0C13F500860246 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		F1A1EE2B2A0C16C500860246 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		F1A1EE2D2A0C1B2300860246 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				F1D9426A2A0EE8010070BDF9 /* SongItemStyle.swift */,
 				F1D9426C2A0EED990070BDF9 /* AlbumItemStyle.swift */,
 				F1D9426E2A0EEEAF0070BDF9 /* FontStyle.swift */,
+				F187F1492A107B1C0095FACD /* FavListModif.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				F1AA46902A0B02BA00CBA32E /* PaddingConstants.swift in Sources */,
 				F1019C382A0946230098FF3C /* TabBarView.swift in Sources */,
 				F1A1EE2E2A0C1B2300860246 /* AlbumViewModel.swift in Sources */,
+				F187F14A2A107B1C0095FACD /* FavListModif.swift in Sources */,
 				F1D942752A0F0BA30070BDF9 /* FavoriteSongModel.swift in Sources */,
 				F118F5512A0C757600FAA632 /* SongViewModel.swift in Sources */,
 				F118F5452A0C688A00FAA632 /* AlbumImageView.swift in Sources */,

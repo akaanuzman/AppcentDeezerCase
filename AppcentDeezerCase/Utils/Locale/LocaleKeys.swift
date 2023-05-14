@@ -8,4 +8,6 @@
 enum LocaleKeys: String {
     case loading = "loading"
     case categories = "categories"
+    case favList = "favList"
+    case haveNotFavList = "haveNotFavList"
 }

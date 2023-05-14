@@ -10,7 +10,7 @@ import SwiftUI
 struct RoundedRectangleView: View {
     var body: some View {
         Rectangle()
-            .frame(width: WidthSize.imageAndRectangleWidth,
+            .frame(width: WidthSize.imageAndRectangleWidth.rawValue,
                    height: HeightSize.rectangle.rawValue)
             .foregroundColor(.pink)
             .cornerRadius(CornerRadius.large.rawValue)

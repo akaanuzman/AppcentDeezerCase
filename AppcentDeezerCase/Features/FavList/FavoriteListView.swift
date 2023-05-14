@@ -14,7 +14,13 @@ struct FavoriteListView: View {
 
     let timer = Timer.publish(every: 0.01, on: .main, in: .common)
         .autoconnect()
-    
+
+    func startTimer() {
+        guard let player = audioViewModel.player else { return }
+        let time = player.currentTime()
+        formattedTimerValue = String(time.positionalTime)
+    }
+
     var body: some View {
         if !favListViewModel.songs.isEmpty {
             let songs = favListViewModel.songs
@@ -40,26 +46,23 @@ struct FavoriteListView: View {
                         }
                         .onReceive(timer) {
                             _ in
-                            guard let player = audioViewModel.player else { return }
-                            let time = player.currentTime()
-                            formattedTimerValue = String(time.positionalTime)
+                            startTimer()
                         }
                         .modifier(SongItemStyle())
                     })
-                }.modifier(ToolbarAndBottomPadding(title: "Beğeni Listesi"))
-                    .navigationTitle("")
+                }.modifier(FavListModif())
+                    .onAppear {
+                        favListViewModel.loadSongsFromStorage()
+                    }
+
             }.modifier(FontStyle())
-                .onAppear {
-                    favListViewModel.loadSongsFromStorage()
-                }
 
         } else {
             NavigationView {
-                Text("Henüz favoriye eklediğiniz bir şarkı bulunmamaktadır.")
+                Text(LocaleKeys.haveNotFavList.rawValue.locale())
                     .padding()
                     .multilineTextAlignment(.center)
-                    .modifier(ToolbarAndBottomPadding(title: "Beğeni Listesi"))
-                        .navigationTitle("")
+                    .modifier(FavListModif())
                     .onAppear {
                         favListViewModel.loadSongsFromStorage()
                     }

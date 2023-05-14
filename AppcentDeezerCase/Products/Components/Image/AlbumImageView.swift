@@ -14,7 +14,7 @@ struct AlbumImageView: View {
         KFImage(URL(string: imageUrl))
             .resizable().aspectRatio(contentMode: .fill)
             .scaledToFill()
-            .frame(width: WidthSize.lowImageWidth,
+            .frame(width: WidthSize.lowImageWidth.rawValue,
                    height: HeightSize.lowImg.rawValue)
             .clipped()
     }
