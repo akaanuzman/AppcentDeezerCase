@@ -58,6 +58,7 @@ struct FavoriteListView: View {
             }.modifier(FontStyle())
 
         } else {
+            
             NavigationView {
                 Text(LocaleKeys.haveNotFavList.rawValue.locale())
                     .padding()

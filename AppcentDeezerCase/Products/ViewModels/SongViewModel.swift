@@ -12,7 +12,6 @@ class SongViewModel: ObservableObject {
     let albumId: String
     let favListStorageService: FavListStorageService = .init()
 
-
     @Published var songs: Tracks?
     @Published var favoriteSongs: [FavoriteSongModel] = []
 
@@ -24,7 +23,7 @@ class SongViewModel: ObservableObject {
             await self.fetchWholeSongs(albumId: self.albumId)
         }
     }
-    
+
     func loadFavSongsFromStorage() {
         favoriteSongs = favListStorageService.getStorage()
     }
@@ -50,18 +49,13 @@ class SongViewModel: ObservableObject {
             }
         }
     }
-    
+
     func getFavIcon(song: Datum) -> String {
-        if !favoriteSongs.isEmpty {
-            if favoriteSongs.firstIndex(where: { $0.song.id == song.id }) != nil {
-                return ImageConstants.heartFill.rawValue
-            }
-            else {
-                return ImageConstants.heart.rawValue
-            }
-        } else if song.isFav {
+        if favoriteSongs.firstIndex(where: { $0.song.id == song.id }) != nil {
+            print("*")
             return ImageConstants.heartFill.rawValue
         } else {
+            print("-")
             return ImageConstants.heart.rawValue
         }
     }

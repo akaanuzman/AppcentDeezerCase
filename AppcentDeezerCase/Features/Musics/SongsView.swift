@@ -15,7 +15,7 @@ struct SongsView: View {
 
     let timer = Timer.publish(every: 0.01, on: .main, in: .common)
         .autoconnect()
-    
+
     func startTimer() {
         guard let player = audioViewModel.player else { return }
         let time = player.currentTime()
@@ -51,10 +51,10 @@ struct SongsView: View {
                         .modifier(SongItemStyle())
                     })
                 }
-                .modifier(ToolbarAndBottomPadding(title: songsData.first?.album?.title ?? ""))
-                .onAppear{
+                .onAppear {
                     songViewModel.loadFavSongsFromStorage()
                 }
+                .modifier(ToolbarAndBottomPadding(title: songsData.first?.album?.title ?? ""))
             }
         } else {
             CircleProgressView()
