@@ -21,6 +21,11 @@ https://github.com/akaanuzman/AppcentDeezerCase/assets/55639112/b2198e18-21ed-4b
 * ####  🚨 Pull Requests
   * [API Bağlantıları ve proje yapılarının kurulup tasarım kısmının büyük ölçüde bittiği ilk pull request](https://github.com/akaanuzman/AppcentDeezerCase/pull/2)
   * [Favori Listesi tasarımı ve favoriye ekleme, silme, gösterme işlemlerinin yapıldığı ikinci pull request](https://github.com/akaanuzman/AppcentDeezerCase/pull/3)
+
+* #### 🎁 Bağımlılıklar
+  * [Alamofire](https://github.com/Alamofire/Alamofire)
+  * [KingFisher](https://github.com/onevcat/Kingfisher)
+  * [Swift-log](https://github.com/apple/swift-log)
  
 <br>
 
@@ -35,3 +40,8 @@ https://github.com/akaanuzman/AppcentDeezerCase/assets/55639112/b2198e18-21ed-4b
 * ####  🚨 Pull Requests
   * [The first pull request where API Connections and project structures are established and the design part is largely finished.](https://github.com/akaanuzman/AppcentDeezerCase/pull/2)
   * [Second pull request for Favorite List design and adding, deleting, displaying to favorites](https://github.com/akaanuzman/AppcentDeezerCase/pull/3)
+  
+* #### 🎁 Dependencies
+  * [Alamofire](https://github.com/Alamofire/Alamofire)
+  * [KingFisher](https://github.com/onevcat/Kingfisher)
+  * [Swift-log](https://github.com/apple/swift-log)
